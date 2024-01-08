@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+  background-color: #000000;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+
+h1 {
+  @apply text-3xl font-bold mb-4;
+}
+
+p {
+  @apply mb-4;
+}
+
+ul {
+  @apply list-disc list-inside;
+}
+
+strong {
+  @apply font-bold text-indigo-400 text-xl;
+}
+
+em {
+  @apply italic text-pink-500;
+}
+
+
+.btn-primary {
+  @apply bg-indigo-500 text-white font-bold py-2 px-4 rounded-xl hover:bg-indigo-700 transition-all duration-200 ease-in-out;
+}
+
+.btn-primary:disabled {
+  @apply bg-indigo-500 text-white font-bold py-2 px-4 rounded-xl opacity-50 cursor-not-allowed;
+}
+
+.chat-container {
+  @apply flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-white bg-opacity-5 h-[calc(100vh-90px)] p-4 w-[calc(100vw-500px)];
+}
+
+.chat-messages {
+  @apply flex flex-col h-full overflow-x-auto mb-4 overflow-scroll;
+}
+
+
+/* Animations */
+
+.fade-in { animation: fadeIn .3s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
