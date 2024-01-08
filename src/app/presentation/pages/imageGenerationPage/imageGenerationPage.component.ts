@@ -10,4 +10,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './imageGenerationPage.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 } )
-export class ImageGenerationPageComponent { }
+export default class ImageGenerationPageComponent { }

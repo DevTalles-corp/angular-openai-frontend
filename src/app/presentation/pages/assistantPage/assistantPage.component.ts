@@ -10,4 +10,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './assistantPage.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 } )
-export class AssistantPageComponent { }
+export default class AssistantPageComponent { }

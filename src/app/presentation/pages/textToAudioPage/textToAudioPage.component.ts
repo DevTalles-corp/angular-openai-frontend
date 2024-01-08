@@ -10,4 +10,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './textToAudioPage.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 } )
-export class TextToAudioPageComponent { }
+export default class TextToAudioPageComponent { }

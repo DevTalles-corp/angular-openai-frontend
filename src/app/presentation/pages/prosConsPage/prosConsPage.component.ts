@@ -10,4 +10,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './prosConsPage.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 } )
-export class ProsConsPageComponent { }
+export default class ProsConsPageComponent { }
