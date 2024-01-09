@@ -1,5 +1,7 @@
 
 
+export * from './audios/text-to-audio.use-case';
+
 
 export * from './orthography/orthography.use-case';
 
