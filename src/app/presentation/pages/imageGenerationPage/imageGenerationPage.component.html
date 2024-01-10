@@ -1,1 +1,45 @@
-<p>imageGenerationPage works!</p>,
+<div class="chat-container">
+  <div class="chat-messages">
+
+    <div class="grid gap-y-2">
+
+      <!-- Chat Messages -->
+      <app-chat-message
+        text="¿Qué deseas generar?"
+      />
+
+      @for (message of messages(); track $index) {
+        @if( message.isGpt ) {
+          <app-chat-message
+            [text]="message.text"
+            [imageInfo]="message.imageInfo"
+          />
+        } @else {
+          <app-my-message [text]="message.text"
+          />
+        }
+      }
+
+
+
+
+
+
+      @if (isLoading()) {
+        <app-typing-loader />
+      }
+
+
+
+    </div>
+  </div>
+
+  <!-- MessageBox -->
+  <app-text-message-box
+    placeholder="Escribe aquí lo que deseas"
+    (onMessage)="handleMessage($event)"
+  />
+
+
+
+</div>

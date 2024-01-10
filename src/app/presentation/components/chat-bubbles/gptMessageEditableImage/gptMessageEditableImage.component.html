@@ -7,24 +7,23 @@
     </div>
 
     <div class="relative ml-3 text-sm bg-black bg-opacity-25 pt-3 pb-2 px-4 shadow rounded-xl">
-      <markdown>{{ text }}</markdown>
-
-      @if ( audioUrl ) {
-        <audio
-          controls
-          [src]="audioUrl"
-          autoplay
-          class="w-full"
-        ></audio>
-      }
-
-      @if ( imageInfo ) {
+<!--
         <img
           [src]="imageInfo.url"
           [alt]="imageInfo.alt"
-          class="rounded-xl w-96 h-96 object-cover"
-        />
-      }
+          class="rounded-xl object-cover"
+          width="1024"
+          height="1024"
+          (click)="handleClick()"
+        /> -->
+      <canvas
+        width="1024"
+        height="1024"
+        #canvas
+        (mousedown)="onMouseDown($event)"
+        (mousemove)="onMouseMove($event)"
+        (mouseup)="onMouseUp()"
+      ></canvas>
 
     </div>
 
