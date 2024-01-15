@@ -1,5 +1,10 @@
 
 
+
+export * from './assistant/create-thread.use-case';
+export * from './assistant/post-question.use-case';
+
+
 export * from './audios/audio-to-text.use-case';
 export * from './audios/text-to-audio.use-case';
 
